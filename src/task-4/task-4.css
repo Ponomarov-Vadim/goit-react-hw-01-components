@@ -1,0 +1,28 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+}
+
+thead,
+th {
+    background-color: lightslategray;
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: gainsboro;
+}
+
+td {
+    text-align: center;
+    padding: 10px 40px;
+    border: 1px solid gray;
+    text-transform: capitalize;
+}
+
+table {
+    border-collapse: collapse;
+}

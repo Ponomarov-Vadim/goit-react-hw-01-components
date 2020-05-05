@@ -1,0 +1,39 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+}
+
+.profile {
+    margin: 0 auto;
+    background-color: #f3f3;
+    width: 260px;
+}
+
+.description {
+    text-align: center;
+    padding: 30px 20px 8px;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+.stats {
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    list-style: none;
+}
+
+.stats li {
+    border: 1px solid black;
+    width: 33.3%;
+    padding: 10px;
+    background-color: gray;
+}
+
+.stats span {
+    display: block;
+    text-align: center;
+    padding-bottom: 8px;
+}
