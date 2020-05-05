@@ -1,5 +1,6 @@
 import React from "react";
-import "./task-4.css";
+import "./TransactionHistory.css";
+import PropTypes from "prop-types";
 
 const transaction = ({ id, type, amount, currency }) => (
   <tr key={id}>
@@ -24,3 +25,14 @@ const TransactionHistory = ({ items }) => (
 );
 
 export default TransactionHistory;
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.string,
+    })
+  ),
+};

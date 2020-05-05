@@ -1,6 +1,6 @@
 import React from "react";
-import "./task-1.css";
-// import PropTypes from "prop-types";
+import "./Profile.css";
+import PropTypes from "prop-types";
 
 const Stats = ({ followers, views, likes }) => (
   <ul className="stats">
@@ -32,3 +32,15 @@ const Profile = ({ avatar, name, tag, location, stats }) => (
 );
 
 export default Profile;
+
+Profile.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
+};

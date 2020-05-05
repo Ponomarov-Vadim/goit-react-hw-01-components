@@ -1,10 +1,11 @@
 import React from "react";
-import "./task-3.css";
+import "./FriendList.css";
+import PropTypes from "prop-types";
 
 const friendCard = ({ isOnline, id, avatar, name }) => {
   const status = isOnline ? "online" : "offline";
   return (
-    <li className="item" key={id}>
+    <li key={id} className="item">
       <span className={"status " + status}></span>
       <img className="avatar" src={avatar} alt="" width="48" />
       <p className="name">{name}</p>
@@ -17,3 +18,14 @@ const FriendList = ({ friends }) => (
 );
 
 export default FriendList;
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      isOnline: PropTypes.bool,
+      id: PropTypes.number,
+      avatar: PropTypes.string,
+      name: PropTypes.string,
+    })
+  ),
+};

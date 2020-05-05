@@ -1,8 +1,9 @@
 import React from "react";
-import "./task-2.css";
+import "./Statistics.css";
+import PropTypes from "prop-types";
 
 const Stats = ({ id, label, percentage }) => (
-  <li className="list-item" key={id}>
+  <li key={id} className="list-item">
     <span className="label">{label}</span>
     <span className="percentage">{percentage + "%"}</span>
   </li>
@@ -16,3 +17,14 @@ const Statistics = ({ title, stats }) => (
 );
 
 export default Statistics;
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
+};

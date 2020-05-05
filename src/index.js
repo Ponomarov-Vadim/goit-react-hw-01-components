@@ -12,15 +12,16 @@ import transactions from "./task-4/transactions.json";
 ReactDOM.render(
   [
     <Profile
+      key={"task-1"}
       name={user.name}
       tag={user.tag}
       location={user.location}
       avatar={user.avatar}
       stats={user.stats}
     />,
-    <Statistics title="Upload stats" stats={statisticalData} />,
-    <FriendList friends={friends} />,
-    <TransactionHistory items={transactions} />,
+    <Statistics key={"task-2"} title="Upload stats" stats={statisticalData} />,
+    <FriendList key={"task-3"} friends={friends} />,
+    <TransactionHistory key={"task-4"} items={transactions} />,
   ],
   document.getElementById("root")
 );
