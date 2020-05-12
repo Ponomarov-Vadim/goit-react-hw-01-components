@@ -1,9 +1,10 @@
 import React from "react";
-import "./Profile.css";
+import styles from "./Profile.module.css";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 const Stats = ({ followers, views, likes }) => (
-  <ul className="stats">
+  <ul className={classNames(styles.stats)}>
     <li>
       <span className="label">Followers</span>
       <span className="quantity">{followers}</span>
@@ -20,14 +21,22 @@ const Stats = ({ followers, views, likes }) => (
 );
 
 const Profile = ({ avatar, name, tag, location, stats }) => (
-  <div className="profile">
-    <div className="description">
-      <img src={avatar} alt="user avatar" className="avatar" />
+  <div className={classNames(styles.profile)}>
+    <div className={classNames(styles.description)}>
+      <img
+        src={avatar}
+        alt="user avatar"
+        className={classNames(styles.avatar)}
+      />
       <p className="name">{name}</p>
       <p className="tag">{"@" + tag}</p>
       <p className="location">{location}</p>
     </div>
-    <Stats stats={stats} />
+    <Stats
+      followers={stats.followers}
+      views={stats.views}
+      likes={stats.likes}
+    />
   </div>
 );
 

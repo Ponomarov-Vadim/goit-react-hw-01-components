@@ -1,9 +1,4 @@
-body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
-}
-
-.friend-list {
+.friendList {
 
     display: inline-block;
     list-style: none;
@@ -26,6 +21,7 @@ body {
     width: 14px;
     border: 1px solid black;
     border-radius: 50%;
+    background-color: red;
 }
 
 .avatar {
@@ -35,8 +31,4 @@ body {
 
 .online {
     background-color: green;
-}
-
-.offline {
-    background-color: red;
 }
