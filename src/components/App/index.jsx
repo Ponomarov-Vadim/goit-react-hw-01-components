@@ -13,16 +13,15 @@ import transactions from "../../db/transactions.json";
 const App = () => (
   <>
     <Profile
-      key={"task-1"}
       name={user.name}
       tag={user.tag}
       location={user.location}
       avatar={user.avatar}
       stats={user.stats}
     />
-    <Statistics key={"task-2"} title="Upload stats" stats={statisticalData} />
-    <FriendList key={"task-3"} friends={friends} />
-    <TransactionHistory key={"task-4"} items={transactions} />
+    <Statistics title="Upload stats" stats={statisticalData} />
+    <FriendList friends={friends} />
+    <TransactionHistory items={transactions} />
   </>
 );
 
