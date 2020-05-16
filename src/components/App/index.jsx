@@ -1,14 +1,14 @@
 import React from "react";
 
-import Profile from "./task-1/Profile";
-import Statistics from "./task-2/Statistics";
-import FriendList from "./task-3/FriendList";
-import TransactionHistory from "./task-4/TransactionHistory";
+import Profile from "../Profile/Profile";
+import Statistics from "../Statistics/Statistics";
+import FriendList from "../FriendList";
+import TransactionHistory from "../TransactionHistory/TransactionHistory";
 
-import user from "./task-1/user.json";
-import statisticalData from "./task-2/statistical-data.json";
-import friends from "./task-3/friends.json";
-import transactions from "./task-4/transactions.json";
+import user from "../../db/user.json";
+import statisticalData from "../../db/statistical-data.json";
+import friends from "../../db/friends.json";
+import transactions from "../../db/transactions.json";
 
 const App = () => (
   <>
